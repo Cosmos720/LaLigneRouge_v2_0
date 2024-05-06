@@ -125,10 +125,10 @@ class PoteletMaitre extends Potelet {
     super.update();
     for (int i=0; i<lidar.length; i++){
       lidar[i].updatePosition();
-      if (deg[i][int(lidar[i].dev+60)]==0){
-        int[] l = {int(lidar[i].dev+60), i, int(lidar[i].mesure), 10000+int(lidar[i].mesure)};
+      if (deg[i][int(lidar[i].dev)]==0){
+        int[] l = {int(lidar[i].dev), i, int(lidar[i].mesure), 10000+int(lidar[i].mesure)};
         valLIDAR.append(formater.format(new Date()) + " -> " + join(str(l),','));
-        deg[i][int(lidar[i].dev+60)] = 1;
+        deg[i][int(lidar[i].dev)] = 1;
       }
       lidar[i].update();
     }

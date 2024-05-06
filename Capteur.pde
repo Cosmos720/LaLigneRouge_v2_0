@@ -113,19 +113,19 @@ class LIDAR extends Capteur {
   LIDAR(Potelet p, float a, float d) {
     super(1, 12000, color(200, 50, 100, 50), color(200, 100, 100, 100));
     rotationSpeed = /*20 / frameRate*/1;
-    minAngle = -60;
-    maxAngle = 60;
-    dev = -60;
+    minAngle = 0;
+    maxAngle = 120;
+    dev = 0;
     teta = a;
     init(p, teta, d);
   }
 
   void update() {
     dev += rotationSpeed;
-    if (abs(dev) >= maxAngle)
+    if (dev >= maxAngle || dev <= minAngle)
       rotationSpeed *= -1;
-    angle = teta + dev;
-    println(angle + " , " + teta + " , " + (dev+60));
+    angle = pote.angle + (teta-60) + dev;
+    println(angle + " , " + teta + " , " + (dev));
     super.update();
   }
 /*
