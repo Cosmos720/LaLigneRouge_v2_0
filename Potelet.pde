@@ -142,6 +142,6 @@ class PoteletMaitre extends Potelet {
 
   void saveJSON(){
     //saveJSONArray(valLIDAR, "output/LIDAR.json");
-    saveStrings("output/LIDAR.log", valLIDAR.toArray());
+    saveStrings("output/LIDAR"+positionMaitre+".log", valLIDAR.toArray());
   }
 }

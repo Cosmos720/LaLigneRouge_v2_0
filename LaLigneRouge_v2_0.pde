@@ -5,6 +5,7 @@ color noir = color(0, 0, 0);
 Serveur simu;
 Ver v;
 PShape salle;
+int positionMaitre = 1;
 
 void setup() {
   size(1000, 1000);

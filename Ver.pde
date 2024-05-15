@@ -20,10 +20,12 @@ class Ver {
     for (int i=1; i<taille-1; i++)
       potes[i].init(potes[i-1], potes[i+1], potes[2], id);
     potes[potes.length - 1].init(potes[potes.length - 2], null, potes[2], id);
-    potes[2].position.y += 100;
-    potes[2].posEstimee.y += 100;
-    potes[2].angle += 45;
-    potes[2].angleEstime += 45;
+    if(positionMaitre == 2){
+      potes[2].position.y += 25;
+      potes[2].posEstimee.y += 25;
+      potes[2].angle += 45;
+      potes[2].angleEstime += 45;
+    }
   }
 
   void update() {
