@@ -56,7 +56,7 @@ class Serveur extends ObjetConnecte {
       bob.display();
 
     mouse.display();
-    shape(salle, width/2 - 70, -900, 300, 3000);
+    shape(salle, width/2-100, -425, 300, 3000);
   }
 
   void dispose() {
